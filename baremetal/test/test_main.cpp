@@ -9,37 +9,6 @@
 
 #include "Fib.h"
 
-
-TEST_GROUP(FibGroup){
-
-};
-
-TEST(FibGroup, FibTest){
-   Fib fib;
-   CHECK_EQUAL(0, 	fib.element(0));
-   CHECK_EQUAL(1, 		fib.element(1));
-   CHECK_EQUAL(13, 	fib.element(6));
-}
-
-TEST_GROUP(FibLeakGroup){
-
-};
-
-TEST(FibLeakGroup, LeakTest){
-   Fib fib;
-   fib.leak();
-   CHECK_EQUAL(13, 	fib.element(6));
-}
-
-TEST_GROUP(FailGroup){
-};
-TEST(FailGroup, FailTest){
-   Fib fib;
-   fib.leak();
-   CHECK_EQUAL(10, 	fib.element(6));
-}
-
-
 int main(int ac, char** av) {
 
 	//Initialise IO as we are using printf for debug

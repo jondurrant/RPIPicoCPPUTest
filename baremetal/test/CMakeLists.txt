@@ -16,6 +16,10 @@ include(../src/files.cmake)
 
 add_executable(${TEST_NAME}
 	test_main.cpp
+	FibGroupTest.cpp
+	FibLeakTest.cpp
+	FailTest.cpp
+	
 	${SRC_FILES}
 )
         
